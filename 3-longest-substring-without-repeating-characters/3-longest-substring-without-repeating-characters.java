@@ -6,12 +6,10 @@ class Solution {
         Set<Character> set = new HashSet<>();
         while (end < s.length()) {
             if (!set.contains(s.charAt(end))) {
-                set.add(s.charAt(end));
-                end++;
+                set.add(s.charAt(end++));
                 max = Math.max(set.size(), max);
             } else {
-                set.remove(s.charAt(start));
-                start++;
+                set.remove(s.charAt(start++));
             }
         }
 
